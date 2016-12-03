@@ -1,0 +1,120 @@
+﻿@model Project2.Models.Missions
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Missions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.missionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionPresFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionPresFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionPresLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionPresLName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dominantReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dominantReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionSymbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionSymbol)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

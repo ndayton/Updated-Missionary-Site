@@ -1,0 +1,78 @@
+﻿@*This page provides information about the mission the user selected. The user can access the question forum only from this page.*@
+
+@model Project2.Models.Missions
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ol class="breadcrumb">
+    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+    <li><a href="@Url.Action("MissionIndex", "Home")">Missions</a></li>
+    <li class="active">@Html.DisplayFor(model => model.missionName) Mission</li>
+</ol>
+
+<div class="row">
+    <h2 class="centered">@Html.DisplayFor(model => model.missionName) Mission</h2>
+    <hr />
+</div>
+<br />
+<br />
+<div class="row">
+    <div class="col-xs-2">
+
+    </div>
+    <div class="col-xs-4">
+        <h4 class="man" style="font-family:Arial; text-decoration:underline">Mission Information</h4>
+        <table>
+            <tr>
+                <td><span class="man">Mission President</span>:</td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.missionPresFName) @Html.DisplayFor(model => model.missionPresLName)</td>
+            </tr>
+            <tr>
+                <td><span class="man">@Html.DisplayNameFor(model => model.language)</span>:</td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.language)</td>
+            </tr>
+            <tr>
+                <td><span class="man">@Html.DisplayNameFor(model => model.climate)</span>:</td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.climate)</td>
+            </tr>
+            <tr>
+                <td><span class="man">@Html.DisplayNameFor(model => model.dominantReligion)</span>:</td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.dominantReligion)</td>
+            </tr>
+        </table>
+        <br />
+        <h4 class="man" style="font-family:Arial; text-decoration:underline">Find Out Where We Are Located</h4>
+        <table>
+            <tr>
+                <td><span class="man">@Html.DisplayNameFor(model => model.missionAddress)</span>:</td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.missionAddress)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.missionCity)<span>,</span> @Html.DisplayFor(model => model.missionState) @Html.DisplayFor(model => model.missionZip)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="lefted" style="padding-left: 8px">@Html.DisplayFor(model => model.missionCountry)</td>
+            </tr>        
+        </table>
+        <br />
+            <a class="btn btn-default btn-sm somecolor" href="@Url.Action("Directions", "Missions", new { missionName = @Html.DisplayFor(model => model.missionName) }, null)">
+                <span class="glyphicon glyphicon-globe"></span> Directions to the Mission
+            </a>
+    </div>
+    <div class="col-xs-6">
+        @*The mission symbol just has a file path stored in the model*@
+        <p class="centered"><img src="@Html.DisplayFor(model => model.missionSymbol)" alt="Mission logo/flag" height="260" /></p>
+    </div>
+</div>
+
+<div class="row">
+    <hr />
+    <h3 class="centered">Want to ask a Question? Check out our @Html.ActionLink("Questions Forum", "Index", "MissionQuestions", new { mid = @ViewBag.id }, null)!</h3>
+</div>
+

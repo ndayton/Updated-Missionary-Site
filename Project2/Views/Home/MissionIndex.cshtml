@@ -1,0 +1,20 @@
+﻿@*Allows users to select a mission to find information about*@
+@{
+    ViewBag.Title = "MissionIndex";
+}
+
+<div class="container">
+    <br />
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+            Choose a Mission
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="@Url.Action("Index", "Missions", new { id = 1 }, null)">Virginia Chesapeake</a></li>
+            <li><a href="@Url.Action("Index", "Missions", new { id = 2 }, null)">Washington Seattle</a></li>
+            <li><a href="@Url.Action("Index", "Missions", new { id = 4 }, null)">Arizona Tempe</a></li>
+        </ul>
+    </div>
+
+</div>

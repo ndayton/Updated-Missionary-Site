@@ -1,0 +1,56 @@
+﻿@*Shows the questions and answers already posted to the question forum. A user may create a new question or edit an answer to a question on this page.*@
+
+@model IEnumerable<Project2.Models.MissionQuestions>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>
+    @Html.ActionLink("Add New Question", "Create", new { mid = ViewBag.mid })
+</h3>
+<br />
+<table class="table">
+    <tr>
+        <th width="100px">
+            @Html.DisplayNameFor(model => model.missionID)
+        </th>
+        <th width="100px">
+            @Html.DisplayNameFor(model => model.userID)
+        </th>
+        <th width="350px">
+            @Html.DisplayNameFor(model => model.question)
+        </th>
+        <th width="350px">
+            @Html.DisplayNameFor(model => model.answer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.answeredBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.missionID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.userID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.question)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.answer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.answeredBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit Answer", "Edit", new { id=item.missionQuestionID })
+        </td>
+    </tr>
+}
+
+</table>

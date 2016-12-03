@@ -1,0 +1,114 @@
+﻿@model Project2.Models.Missions
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Missions</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.missionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionPresFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionPresFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionPresLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionPresLName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionState)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionState)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionZip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionZip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.language)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.language)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dominantReligion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dominantReligion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.missionSymbol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.missionSymbol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.missionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
